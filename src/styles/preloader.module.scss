@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.container_preloader {
+  position: relative;
+
+  width: 80px;
+  height: 80px;
+  margin: 2rem auto 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: rotate-counterclockwise 1.5s linear infinite;
+}
+
+.point {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #3498db;
+  width: var(--size);
+  height: var(--size);
+  left: var(--x);
+  top: var(--y);
+}
+
+

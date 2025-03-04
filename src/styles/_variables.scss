@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$c_black: #000000FF;
+//$c_grey: ;
+$c_grey_darken: #6D787A;
+$c_grey_light: #EDEDED;
+//$c_grey_surface: ;
+$c_white: #FFFFFF;
+$c_blue: #096FFA;
+//$c_blue_sec: ;
+//$c_yellow: ;
+
+$fs_small: 14px;
+$fs_normal: 16px;
+$fs_large: 18px;
+$fs_x_large: 20px;
+$fs_2x_large: 22px;
+$fs_3x_large: 24px;
+
+
+$font-family: 'Lato', sans-serif;
+$font_weight_bold: 800;
+$font_weight_normal: 400;
+
+@mixin fontStyle($type) {
+  font-family: $font-family;
+
+  @if $type == 'bold' {
+    font-weight: $font_weight_bold;
+  } @else {
+    font-weight: $font_weight_normal;
+  }
+}
+
+@mixin font_calc($min_size, $max_size) {
+  font-size: calc(#{$min_size}px + (#{$max_size} - #{$min_size}) * (100vw - 360px) / (1920 - 360));
+}

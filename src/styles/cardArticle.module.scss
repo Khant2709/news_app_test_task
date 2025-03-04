@@ -1,0 +1,43 @@
+@use "variables" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+
+  border-bottom: 1px solid $c_grey_light;
+  padding-bottom: 1rem;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.containerInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+
+  text-align: left;
+}
+
+.title_article {
+  color: $c_blue;
+  font-size: $fs_small;
+  @include fontStyle('bold')
+}
+
+.text {
+  color: $c_black;
+  font-size: $fs_normal;
+  @include fontStyle('normal')
+}
+
+.date {
+  color: $c_grey_darken;
+  font-size: $fs_small;
+  @include fontStyle('normal')
+}
