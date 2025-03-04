@@ -20,7 +20,6 @@
 1. Склонируйте репозиторий:
    ```sh
    git clone https://github.com/Khant2709/news_app_test_task.git
-   cd weather-app
 
 2. Установите зависимости:
     ``` 
